@@ -1,10 +1,14 @@
 from src.ua.lviv.lpnu.iot.lab2.manger.InsectManager import InsectManager
+from src.ua.lviv.lpnu.iot.lab2.models.Bee import Bee
 from src.ua.lviv.lpnu.iot.lab2.models.Hornet import Hornet
 from src.ua.lviv.lpnu.iot.lab2.models.Mosquito import Mosquito
+from src.ua.lviv.lpnu.iot.lab2.models.Spider import Spider
 
 hornet = Hornet("Dan", 4, True, True, True)
 mosquito = Mosquito("Ivanka", 6, True)
-insect_manager = InsectManager([Hornet(), Mosquito(), hornet, mosquito])
+spider = Spider("Vitalik", 8, False, False)
+
+insect_manager = InsectManager([Hornet(), Mosquito(), hornet, mosquito, spider, Bee()])
 
 for insect in insect_manager.insects:
     print(insect)
