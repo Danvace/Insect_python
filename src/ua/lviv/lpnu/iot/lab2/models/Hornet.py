@@ -2,19 +2,50 @@ from src.ua.lviv.lpnu.iot.lab2.models.Insect import Insect
 
 
 class Hornet(Insect):
+    """
+    A class representing a hornet, which is a type of insect.
+    """
 
     def __init__(self, name="Insect", number_of_legs=0, has_wings=False, is_dangerous=False, is_queen=False,
                  is_old_queen=False):
+        """
+        Initialize a Hornet object.
+
+        Args:
+            name (str): The name of the hornet. Default is "Insect".
+            number_of_legs (int): The number of legs the hornet has. Default is 0.
+            has_wings (bool): Indicates whether the hornet has wings. Default is False.
+            is_dangerous (bool): Indicates whether the hornet is dangerous. Default is False.
+            is_queen (bool): Indicates whether the hornet is a queen. Default is False.
+            is_old_queen (bool): Indicates whether the hornet is an old queen. Default is False.
+        """
         super().__init__(name, number_of_legs, has_wings, is_dangerous)
         self.is_queen = is_queen
         self.is_old_queen = is_old_queen
 
     def can_inject_poison(self):
+        """
+        Check if the hornet can inject poison.
+
+        Returns:
+            bool: True if the hornet is a queen and has more than 6 legs, False otherwise.
+        """
         return self.is_queen and self.number_of_legs > 6
 
     def survive_over_winter(self):
+        """
+        Check if the hornet can survive over the winter.
+
+        Returns:
+            bool: True if the hornet is not an old queen and can survive over the winter, False otherwise.
+        """
         return not self.is_old_queen
 
     def __str__(self):
-        return super().__str__() + \
-               f"Hornet(is_queen = {self.is_queen}, is_old_queen = {self.is_old_queen})"
+        """
+        Return a string representation of the hornet.
+
+        Returns:
+            str: String representation of the hornet.
+        """
+        return super().__str__() + f"Hornet(is_queen = {self.is_queen}, is_old_queen = {self.is_old_queen})"

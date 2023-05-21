@@ -6,7 +6,7 @@ hornet = Hornet("Dan", 4, True, True, True)
 mosquito = Mosquito("Ivanka", 6, True)
 insect_manager = InsectManager([Hornet(), Mosquito(), hornet, mosquito])
 
-for insect in insect_manager.list_of_insects:
+for insect in insect_manager.insects:
     print(insect)
 
 print("\n")

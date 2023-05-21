@@ -1,10 +1,34 @@
 class InsectManager:
+    """
+    A class for managing a list of insects.
+    """
 
     def __init__(self, list_of_insects=None):
-        self.list_of_insects = list_of_insects
+        """
+        Initialize an InsectManager object.
+
+        Args:
+            list_of_insects (list): A list of Insect objects. Default is None.
+        """
+        self.insects = list_of_insects
 
     def find_all_with_more_than(self, legs):
-        return [insect for insect in self.list_of_insects if insect.number_of_legs >= legs]
+        """
+        Find all insects with more than the specified number of legs.
+
+        Args:
+            legs (int): The minimum number of legs for the insects to be included.
+
+        Returns:
+            list: A list of Insect objects with more than the specified number of legs.
+        """
+        return [insect for insect in self.insects if insect.number_of_legs > legs]
 
     def find_all_with_wings(self):
-        return [insect for insect in self.list_of_insects if insect.has_wings]
+        """
+        Find all insects that have wings.
+
+        Returns:
+            list: A list of Insect objects that have wings.
+        """
+        return [insect for insect in self.insects if insect.has_wings]
