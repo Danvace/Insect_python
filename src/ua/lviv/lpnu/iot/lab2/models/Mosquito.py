@@ -13,5 +13,5 @@ class Mosquito(Insect):
         return False
 
     def __str__(self):
-        return super().__str__() +\
-            f"Mosquito(has_health_sting = {self.has_health_sting})"
+        return super().__str__() + \
+               f"Mosquito(has_health_sting = {self.has_health_sting})"

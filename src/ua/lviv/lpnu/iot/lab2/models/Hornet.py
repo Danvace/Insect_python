@@ -16,6 +16,5 @@ class Hornet(Insect):
         return not self.is_old_queen
 
     def __str__(self):
-        return super().__str__() +\
+        return super().__str__() + \
                f"Hornet(is_queen = {self.is_queen}, is_old_queen = {self.is_old_queen})"
-
