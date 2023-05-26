@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 
 
-@abstractmethod
 class Insect(ABC):
 
     def __init__(self, name="Insect", number_of_legs=0, has_wings=False, is_dangerous=False):

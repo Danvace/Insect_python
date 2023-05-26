@@ -22,7 +22,7 @@ class InsectManager:
         Returns:
             list: A list of Insect objects with more than the specified number of legs.
         """
-        return [insect for insect in self.insects if insect.number_of_legs > legs]
+        return list(filter(lambda insect: insect.number_of_legs >= legs, self.insects))
 
     def find_all_with_wings(self):
         """
@@ -31,4 +31,4 @@ class InsectManager:
         Returns:
             list: A list of Insect objects that have wings.
         """
-        return [insect for insect in self.insects if insect.has_wings]
+        return list(filter(lambda insect: insect.has_wings, self.insects))
