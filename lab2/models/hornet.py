@@ -1,4 +1,7 @@
-from src.ua.lviv.lpnu.iot.lab2.models.Insect import Insect
+"""
+This module defines the Hornet class, which represents a Hornet, a type of insect.
+"""
+from lab2.models.insect import Insect
 
 
 class Hornet(Insect):

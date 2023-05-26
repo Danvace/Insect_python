@@ -1,7 +1,23 @@
+"""
+This module defines the Insect class, which represents an abstract insect.
+
+Classes:
+    Insect: An abstract base class for insects.
+"""
+
 from abc import ABC, abstractmethod
 
 
 class Insect(ABC):
+    """
+    An abstract base class for representing an insect.
+
+    Attributes:
+        name (str): The name of the insect.
+        number_of_legs (int): The number of legs the insect has.
+        has_wings (bool): Indicates whether the insect has wings.
+        is_dangerous (bool): Indicates whether the insect is dangerous.
+    """
 
     def __init__(self, name="Insect", number_of_legs=0, has_wings=False, is_dangerous=False):
         """
@@ -30,8 +46,18 @@ class Insect(ABC):
 
     @abstractmethod
     def can_inject_poison(self):
-        pass
+        """
+        Abstract method to check if the insect can inject poison.
+
+        Returns:
+            bool: True if the insect can inject poison, False otherwise.
+        """
 
     @abstractmethod
     def survive_over_winter(self):
-        pass
+        """
+        Abstract method to determine if the insect can survive over winter.
+
+        Returns:
+            bool: True if the insect can survive over winter, False otherwise.
+        """

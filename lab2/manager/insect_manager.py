@@ -1,3 +1,8 @@
+"""
+This module defines the InsectManager class for managing a list of insects.
+"""
+
+
 class InsectManager:
     """
     A class for managing a list of insects.
