@@ -19,7 +19,8 @@ class Insect(ABC):
         is_dangerous (bool): Indicates whether the insect is dangerous.
     """
 
-    def __init__(self, name="Insect", number_of_legs=0, has_wings=False, is_dangerous=False):
+    def __init__(self, name: str = "Insect", number_of_legs: int = 0, has_wings: bool = False,
+                 is_dangerous: bool = False):
         """
         Initializes a new instance of the Insect class.
 
@@ -61,3 +62,16 @@ class Insect(ABC):
         Returns:
             bool: True if the insect can survive over winter, False otherwise.
         """
+
+    def get_attributes_by_type(self, data_type):
+        """
+                Get a dictionary with all the keys and values of object attributes of a specific data type.
+
+                Args:
+                    data_type (type): The data type to filter attributes.
+
+                Returns:
+                    dict: A dictionary containing the keys and values
+                    of object attributes matching the specified data type.
+        """
+        return {key: value for key, value in self.__dict__.items() if isinstance(value, data_type)}

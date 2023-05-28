@@ -9,8 +9,9 @@ class Hornet(Insect):
     A class representing a hornet, which is a type of insect.
     """
 
-    def __init__(self, name="Insect", number_of_legs=0, has_wings=False, is_dangerous=False, is_queen=False,
-                 is_old_queen=False):
+    def __init__(self, name: str = "Insect", number_of_legs: int = 0, has_wings: bool = False,
+                 is_dangerous: bool = False, is_queen: bool = False,
+                 is_old_queen: bool = False):
         """
         Initialize a Hornet object.
 
