@@ -9,6 +9,7 @@ class Bee(Insect):
     """
     A class representing a bee, which is a type of insect.
     """
+    favorite_set_of_food = {"honey", "pollen"}
 
     def can_inject_poison(self):
         """

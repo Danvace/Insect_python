@@ -23,6 +23,7 @@ class Mosquito(Insect):
         """
         super().__init__(name, number_of_legs, has_wings, is_dangerous)
         self.has_health_sting = has_health_sting
+        self.favorite_set_of_food = {"blood"}
 
     def can_inject_poison(self):
         """

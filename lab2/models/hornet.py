@@ -9,9 +9,12 @@ class Hornet(Insect):
     A class representing a hornet, which is a type of insect.
     """
 
+
+
     def __init__(self, name: str = "Insect", number_of_legs: int = 0, has_wings: bool = False,
                  is_dangerous: bool = False, is_queen: bool = False,
                  is_old_queen: bool = False):
+
         """
         Initialize a Hornet object.
 
@@ -26,6 +29,7 @@ class Hornet(Insect):
         super().__init__(name, number_of_legs, has_wings, is_dangerous)
         self.is_queen = is_queen
         self.is_old_queen = is_old_queen
+        self.favorite_set_of_food = {"bread", "water", "grain"}
 
     def can_inject_poison(self):
         """

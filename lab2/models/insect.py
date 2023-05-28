@@ -34,6 +34,7 @@ class Insect(ABC):
         self.number_of_legs = number_of_legs
         self.has_wings = has_wings
         self.is_dangerous = is_dangerous
+        self.favorite_set_of_food = {}
 
     def __str__(self):
         """
@@ -44,6 +45,9 @@ class Insect(ABC):
         """
         return f"Insect(name='{self.name}', number_of_legs={self.number_of_legs}, has_wings={self.has_wings}, " \
                f"is_dangerous={self.is_dangerous})"
+
+    def __iter__(self):
+        return iter(self.favorite_set_of_food)
 
     @abstractmethod
     def can_inject_poison(self):
