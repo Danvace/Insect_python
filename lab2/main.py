@@ -67,3 +67,13 @@ insect_manager = InsectManager([Hornet(), Mosquito(), hornet, mosquito, spider, 
 print(insect_manager.list_of_result_can_inject_poison())
 c = insect_manager.dict_condition_can_inject_poison()
 print(c)
+
+a = insect_manager.list_of_result_can_inject_poison()
+print(a)
+
+b = insect_manager.zip_return()
+c = set(insect_manager.zip_return())
+
+d = insect_manager.enumerate_list()
+f = insect_manager.enumerate_list()
+u = insect_manager.enumerate_list()

@@ -2,6 +2,9 @@
 This module defines the InsectManager class for managing a list of insects.
 """
 
+from lab2.decorators.to_tuple_decorator import to_tuple_decorator
+from lab2.decorators.method_calls_counter import method_calls_counter
+
 
 class InsectManager:
     """
@@ -67,6 +70,7 @@ class InsectManager:
         """
         return list(filter(lambda insect: insect.has_wings, self.insects))
 
+    @to_tuple_decorator
     def list_of_result_can_inject_poison(self):
         """
 
@@ -74,6 +78,7 @@ class InsectManager:
         """
         return [insect.can_inject_poison() for insect in self.insects]
 
+    @method_calls_counter("count_method.txt")
     def zip_return(self):
         """
 
@@ -82,6 +87,7 @@ class InsectManager:
         result = self.list_of_result_can_inject_poison()
         return list(zip(self.insects, result))
 
+    @method_calls_counter("count_method.txt")
     def enumerate_list(self):
         """
 
