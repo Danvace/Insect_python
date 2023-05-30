@@ -12,6 +12,8 @@ class Spider(Insect):
         Insect: An abstract base class for insects.
     """
 
+    favorite_set_of_food = {"insect", "meat"}
+
     def can_inject_poison(self):
         """
         Checks if the spider can inject poison.

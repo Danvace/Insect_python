@@ -9,7 +9,8 @@ class Mosquito(Insect):
     A class representing a mosquito, which is a type of insect.
     """
 
-    def __init__(self, name="Insect", number_of_legs=0, has_wings=False, is_dangerous=False, has_health_sting=False):
+    def __init__(self, name: str = "Insect", number_of_legs: int = 0, has_wings: bool = False,
+                 is_dangerous: bool = False, has_health_sting: bool = False):
         """
         Initialize a Mosquito object.
 
@@ -22,6 +23,7 @@ class Mosquito(Insect):
         """
         super().__init__(name, number_of_legs, has_wings, is_dangerous)
         self.has_health_sting = has_health_sting
+        self.favorite_set_of_food = {"blood"}
 
     def can_inject_poison(self):
         """
