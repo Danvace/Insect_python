@@ -6,15 +6,15 @@
 def method_calls_counter(file_path):
     """
 
-    :param file_path:
-    :return:
+    :param file_path: the file path where save data
+    :return: Function
     """
 
     def decorator(func):
         def wrapper(*args, **kwargs):
 
             try:
-                with open(file_path, 'r') as file:
+                with open(file_path, 'r', encoding="UTF-8") as file:
                     lines = file.readlines()
             except FileNotFoundError:
                 lines = []
@@ -30,7 +30,7 @@ def method_calls_counter(file_path):
 
                 lines.append(f'{method_name},{call_count}\n')
 
-            with open(file_path, 'w') as file:
+            with open(file_path, 'w', encoding="UTF-8") as file:
                 file.writelines(lines)
 
             return func(*args, **kwargs)

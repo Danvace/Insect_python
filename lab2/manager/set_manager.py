@@ -18,6 +18,7 @@ class SetManager:
                 Defaults to a new instance of InsectManager if not provided.
         """
         self.insect_manager = insect_manager
+        self.index = 0
 
     def __iter__(self):
         """
@@ -26,9 +27,8 @@ class SetManager:
         Yields:
             str: The favorite food of an insect.
         """
-        for obj in self.insect_manager:
-            for food in obj.get_favorite_food_set():
-                yield food
+        self.index = 0
+        return self
 
     def __len__(self):
         """
@@ -38,8 +38,8 @@ class SetManager:
             int: The total number of favorite foods.
         """
         count = 0
-        for obj in self.insect_manager:
-            count += len(obj.get_favorite_food_set())
+        for insect in self.insect_manager:
+            count += len(insect.favorite_set_of_food)
         return count
 
     def __next__(self):
@@ -48,13 +48,18 @@ class SetManager:
 
         Yields:
             str: The next favorite food of an insect.
-        
+
         Raises:
             StopIteration: If there are no more favorite foods.
         """
-        for obj in self.insect_manager:
-            for food in obj.get_favorite_food_set():
-                yield food
+        for insect in self.insect_manager:
+            favorite_food_set = insect.favorite_set_of_food
+            if self.index < len(favorite_food_set):
+                favorite_food = list(favorite_food_set)[self.index]
+                self.index += 1
+                return favorite_food
+            self.index = 0
+        raise StopIteration
 
     def __getitem__(self, index):
         """
@@ -69,8 +74,8 @@ class SetManager:
         Raises:
             IndexError: If the index is out of range.
         """
-        for obj in self.insect_manager:
-            favorite_food_set = obj.get_favorite_food_set()
+        for insect in self.insect_manager:
+            favorite_food_set = insect.favorite_set_of_food
             if index < len(favorite_food_set):
                 return list(favorite_food_set)[index]
             index -= len(favorite_food_set)

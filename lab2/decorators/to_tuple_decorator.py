@@ -15,12 +15,6 @@ def to_tuple_decorator(iterator_method):
     """
 
     def inner(*args, **kwargs):
-        # Викликати оригінальний метод-ітератор
-        iterator = iterator_method(*args, **kwargs)
-
-        # Перетворити результат в кортеж
-        result = tuple(iterator)
-
-        return result
+        return tuple(iterator_method(*args, **kwargs))
 
     return inner

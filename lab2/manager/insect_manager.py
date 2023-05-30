@@ -1,7 +1,6 @@
 """
 This module defines the InsectManager class for managing a list of insects.
 """
-
 from lab2.decorators.to_tuple_decorator import to_tuple_decorator
 from lab2.decorators.method_calls_counter import method_calls_counter
 

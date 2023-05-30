@@ -21,6 +21,7 @@ from lab2.models.bee import Bee
 from lab2.models.hornet import Hornet
 from lab2.models.mosquito import Mosquito
 from lab2.models.spider import Spider
+from lab2.manager.set_manager import SetManager
 
 # Create instances of different insects
 hornet = Hornet("Dan", 9, True, True, True)
@@ -60,20 +61,27 @@ insect_manager = InsectManager([Hornet(), Mosquito(), hornet, mosquito, spider, 
 #     print(i[0])
 #     print(i[1])
 #
-# b = insect_manager.dict_type(bool)
+# b = insect_manager.dict_type()
 # for j in b:
 #     print(j)
 
-print(insect_manager.list_of_result_can_inject_poison())
-c = insect_manager.dict_condition_can_inject_poison()
-print(c)
+# print(insect_manager.list_of_result_can_inject_poison())
+# c = insect_manager.dict_condition_can_inject_poison()
+# print(c)
 
-a = insect_manager.list_of_result_can_inject_poison()
-print(a)
+# a = insect_manager.list_of_result_can_inject_poison()
+# print(a)
+#
+# b = insect_manager.zip_return()
+# c = set(insect_manager.zip_return())
+#
+# d = insect_manager.enumerate_list()
+# f = insect_manager.enumerate_list()
+# u = insect_manager.enumerate_list()
 
-b = insect_manager.zip_return()
-c = set(insect_manager.zip_return())
 
-d = insect_manager.enumerate_list()
-f = insect_manager.enumerate_list()
-u = insect_manager.enumerate_list()
+f = insect_manager.dict_type(bool)
+
+g = insect_manager.dict_type(bool)
+
+lol = SetManager(insect_manager)
