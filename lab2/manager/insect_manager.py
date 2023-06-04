@@ -77,7 +77,7 @@ class InsectManager:
         """
         return [insect.can_inject_poison() for insect in self.insects]
 
-    @method_calls_counter("count_method.txt")
+    @method_calls_counter("/Users/mac/PycharmProjects/Insect_python/lab2/models/count_method.txt")
     def zip_return(self):
         """
 
