@@ -6,6 +6,8 @@ Classes:
 """
 
 from abc import ABC, abstractmethod
+
+from lab2.decorators.logger import logged
 from lab2.exceptions.invalid_food_exception import InvalidFoodException
 
 
@@ -81,6 +83,7 @@ class Insect(ABC):
         """
         return {key: value for key, value in self.__dict__.items() if isinstance(value, data_type)}
 
+    @logged(InvalidFoodException, "file")
     def add_favorite_food(self, food):
         """
         :param food: food to add to favorite_food

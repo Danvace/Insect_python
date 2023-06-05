@@ -74,7 +74,7 @@ insect_manager = InsectManager([Hornet(), Mosquito(), hornet, mosquito, spider, 
 #
 # b = insect_manager.zip_return()
 
-c = set(insect_manager.zip_return())
+# c = set(insect_manager.zip_return())
 
 # d = insect_manager.enumerate_list()
 # f = insect_manager.enumerate_list()
