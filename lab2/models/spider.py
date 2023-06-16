@@ -11,8 +11,10 @@ class Spider(Insect):
     Inherits from:
         Insect: An abstract base class for insects.
     """
-
-    favorite_set_of_food = {"insect", "meat"}
+    def __init__(self, name: str = "Insect", number_of_legs: int = 0, has_wings: bool = False,
+                 is_dangerous: bool = False):
+        super().__init__(name, number_of_legs, has_wings, is_dangerous)
+        self.favorite_set_of_food = {"insect", "meat"}
 
     def can_inject_poison(self):
         """

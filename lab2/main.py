@@ -21,7 +21,7 @@ from lab2.models.bee import Bee
 from lab2.models.hornet import Hornet
 from lab2.models.mosquito import Mosquito
 from lab2.models.spider import Spider
-from lab2.manager.set_manager import SetManager
+# from lab2.manager.set_manager import SetManager
 
 # Create instances of different insects
 hornet = Hornet("Dan", 9, True, True, True)
@@ -73,15 +73,17 @@ insect_manager = InsectManager([Hornet(), Mosquito(), hornet, mosquito, spider, 
 # print(a)
 #
 # b = insect_manager.zip_return()
+
 # c = set(insect_manager.zip_return())
-#
+
 # d = insect_manager.enumerate_list()
 # f = insect_manager.enumerate_list()
 # u = insect_manager.enumerate_list()
 
 
-f = insect_manager.dict_type(bool)
-
-g = insect_manager.dict_type(bool)
-
-lol = SetManager(insect_manager)
+# f = insect_manager.dict_type(bool)
+#
+# g = insect_manager.dict_type(bool)
+#
+# lol = SetManager(insect_manager)
+spider.add_favorite_food(4)
